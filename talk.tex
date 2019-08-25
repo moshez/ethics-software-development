@@ -173,12 +173,22 @@ of software development being completely unregulated.
 
 \end{frame}
 
-
-\begin{itemize}
-\item Accountability?
-\item User expectations
-\item Big picture?
-\end{itemize}
+There was a lot of public conversation about what led to the incident.
+The first thing was that people realized that nobody is ever accountable
+for software.
+Everything comes with broad liability disclaimers.
+Moreover,
+nobody feels accountable for the final result.
+Senior management off-loads to product managers,
+product managers off-load to developers,
+and they in turn off-load back to product managers,
+or sometimes to QA.
+Nobody feels responsible.
+Nobody is in charge of managing user expectations,
+and making sure they align with what the software does.
+Most programmers work on one small part of the project,
+and often have no visibility into what the project as a whole is supposed to do.
+They often do not even know how this is intended to make money.
 
 \begin{frame}[fragile]
 \frametitle{The Incident: Consequences}
@@ -189,12 +199,16 @@ of software development being completely unregulated.
 
 \end{frame}
 
-
-\begin{itemize}
-\item Billions of dollars' worth destroyed
-\item Signifcant death toll
-\item Businesses bankrupt
-\end{itemize}
+What happened?
+Trillions of dollars were lost,
+either directly or as a result of 
+something breaking.
+People died.
+Business went bankrupt.
+It was pretty bad.
+In 21st century term,
+it was worse than 2008 financial crisis bad.
+More like...world-war level of bad.
 
 \begin{frame}[fragile]
 \frametitle{The Incident: Aftermath}
@@ -205,13 +219,13 @@ of software development being completely unregulated.
 
 \end{frame}
 
-Redtape: \verb|https://commons.wikimedia.org/wiki/File:Redtape1.JPG|
-
-\begin{itemize}
-\item Regulation!
-\item What makes software "fit for use"?
-\item Who can write software?
-\end{itemize}?
+In the aftermath of the incident,
+finally,
+the political will to internationally regulate software existed.
+We went back to the basics.
+What would make software fit to be used?
+Who is allowed to write software that people will use?
+How do we ensure that?
 
 \begin{frame}[fragile]
 \frametitle{23rd century}
@@ -219,6 +233,20 @@ Redtape: \verb|https://commons.wikimedia.org/wiki/File:Redtape1.JPG|
 It took a while...
 
 \end{frame}
+
+Figuring an entire regulatory structure for an existing industry took a while.
+Imagine if driving regulation started a couple of hundred years after
+cars were invented.
+We had to figure out how to enact the regulation in a way that would
+allow the software industry to adapt.
+It probably would not have worked,
+but the incident was so bad,
+that whenever political will faltered,
+someone would remind people how bad it can get.
+
+Treaties were made.
+Laws were confirmed.
+We finally had a regulatory regime that allowed software to be safe for people.
 
 \begin{frame}[fragile]
 \frametitle{OS Updates}
@@ -229,6 +257,19 @@ It took a while...
 \end{itemize}
 
 \end{frame}
+
+We started with the basics:
+what the operating system that runs on devices is supposed to look like.
+OS updates were signed and mandatory.
+A non-updated device would be disfunctional until it could get updated.
+Device vendors had to commit to sending critical and security updates
+for the lifetime of the device.
+
+In particular,
+for devices that were to be used for real work,
+the OS and device maker were considered the same entity.
+While the device maker could outsource the development of the OS,
+they had final responsibility.
 
 \begin{frame}[fragile]
 \frametitle{Application stores}
@@ -244,13 +285,60 @@ It took a while...
 
 \end{frame}
 
-\begin{itemize}
-\item Competition
-\item Bonded accountability
-\item 5 "general purpose"
-\item 20-30 "special purpose" (porn, kid entertainment)
-\item Certificate authorities
-\end{itemize}
+However,
+a device maker was explicitly barred from making decisions
+as to what software is allowed to run on the device.
+App stores would do that.
+Specific rules for competitions between app stores were enacted.
+A device maker
+*could*
+pre-load any app store,
+but had to give a way for a user to add
+*any*
+licensed app store that supported the device.
+
+Licensing an app store is non-trivial.
+Among other things,
+an app store has to have significant financial backing.
+Since it is ultimately responsible for rogue apps,
+it has to be able to pay out in case of a problem.
+All big companies run an app store:
+I will not give names,
+since things have changed.
+
+Translated to the 21st century,
+every big company has an app store:
+Google, Microsoft, Apple, Samsung,
+Facebook, Disney and more.
+There are about twenty "popular" app stores,
+plus some niche stores.
+Some stores specialize in devices from one company.
+Some stores specialize in "ratings":
+you can know that if an app is rated "G",
+it really is safe for kids.
+
+Some stores specialize in the exact opposite:
+since most stores do not allow porn or porn-centric apps,
+there is a market for porn-first app stores,
+which explicitly allow for those apps.
+
+Finally,
+there is no difference between an "app store"
+and a "certificate authority".
+All apps use the 23rd century equivalent of TLS to connect to servers
+when they do.
+Apps will verify that the certificate authority of the server
+is store they were installed through.
+For general browsing,
+installing a store is the same as installing a certificate authority,
+and will allow connecting to web sites that were signed by this
+authority.
+
+In some sense,
+it does not matter to the store which part of the app runs on the device,
+and which part runs on the server:
+the store certifies the whole thing is both fit for use,
+and complies with whatever guidelines the store has.
 
 \begin{frame}[fragile]
 \frametitle{Publishing on application stores}
@@ -426,6 +514,7 @@ Picture credits:
 \item Picture of lock: \url{https://commons.wikimedia.org/wiki/Category:Padlocks#/media/File:Candados_2012.JPG}
 \item Picture of scale: \url{https://commons.wikimedia.org/wiki/Category:Weighing_scales#/media/File:Vaga_MNT.jpg}
 \item Picture of screen: \url{https://www.flickr.com/photos/garyjwood/275644014/in/photolist-qmKn1-qmKBr-oYwMG-7UWHnT-EyyT4M-qmL3a-cjf8xs-5wx88t-caR8tq-7QR7pg-6BzSc1-7U9YpL-5v4D74-6C7S53-5i8ZvA-61pcSS-5xP7Hs-5i8ZAA-caR8nd-5hygTA-5htVfK-cjhDRh-5hJXrd-au2jhs-9jX3Pw-7JaQvb-5m5PjW-5i4DBD-5m5PwE-6DPVqE-cttiCW-g5fH57-5wBrCN-6jS7DQ-ctw4mE-5hJXtC-5m5Pph-5hPBJY-6ovsi7-613SBd-6jNe5t-5m5Ptf-5iX6HH-5xRoUn-5i4DMz-5m5Prw-9nXhNt-5m1xre-caR8rh-5htVjc}
+\item Picture of red tape: \url{https://commons.wikimedia.org/wiki/File:Redtape1.JPG}
 \end{itemize}
 
 \end{document}
