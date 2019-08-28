@@ -465,13 +465,34 @@ and will sometimes have rules limiting who can publish those.
 
 \end{frame}
 
+We also have better regulation around privacy laws.
+The privacy policy must be easily accessible at all times,
+not just at install time.
+It must also be clear.
+There are specific guidelines on the length of it,
+and there are more vague,
+but still enforceable,
+guidelines
+on its language.
 
-\begin{itemize}
-\item Privacy policy
-\item Clear
-\item Immutable
-\end{itemize}
+For example,
+a common misunderstanding,
+proven by surveying people on their expectations,
+will be considered as though it was part of the privacy policy.
 
+Finally,
+privacy policies are *immutable*.
+Organizations cannot have a one-sided change of a privacy policy.
+There are two options that they can take when they need to change
+the privacy policy for business reasons.
+One is to *ask* people if they are willing.
+In that case,
+"no"
+must be respected as an answer.
+The other option is to sunset the service,
+and encourage people to install a new service,
+with a new privacy policy,
+which will migrate the data.
 
 \begin{frame}[fragile]
 \frametitle{Security laws}
@@ -483,12 +504,26 @@ and will sometimes have rules limiting who can publish those.
 
 \end{frame}
 
+There are also laws governing security.
+Any breaches must be immediately reported.
+The only allowable delay is
+"for purposes of active investigation",
+in which case reporting to a law-enforcement authority is still required.
+The authority can grant delays to public disclosure on an
+as-needed
+basis,
+but in practice it is limited by internal procedures:
+a higher rank is needed to issue a longer delay.
 
-\begin{itemize}
-\item Reasonable care to avoid breaches
-\item Breaches must be reported
-\item Delay in reporting must be signed off by law enforcement
-\end{itemize}
+Of course,
+once a breach is reported,
+the investigation will include whether the company took reasonable care to
+avoid it.
+This means using security best practices and measures.
+Not using those measures exposes a company to civil penalties,
+as well as potentially,
+in case of maliciousness or gross negligence,
+individuals in the company to criminal liability.
 
 \begin{frame}[fragile]
 \frametitle{Fairness in competition laws}
@@ -500,13 +535,35 @@ and will sometimes have rules limiting who can publish those.
 
 \end{frame}
 
+Finally,
+we have laws enforcing fair competition.
+These are a result of software being a
+"natural"
+monopoly,
+and monopolies in general being undesirable.
 
-\begin{itemize}
-\item All devices must allowed all application stores
-\item All web services have APIs
-\item Local application data format documented
-\item Only barrier to API/data access is user consent
-\end{itemize}
+All devices must allow all application stores.
+As soon as an application store is vetted,
+it is not allowed to prevent it from being easily installable on a device.
+All web services must have documented APIs,
+and all local application data formats must be documented.
+As long as a user consents,
+any licensed application can access any service.
+This means that "importing data" is pretty much a standard feature
+of any service or application.
+
+This also means that protection against a
+"Cambridge Analytica"
+type scandal,
+one of my favorite historical case studies from ethics class,
+does not come from limiting what an API can access.
+If a user can accesss their contacts' pictures,
+updates
+or details,
+so can a service which has the user's consent.
+However,
+that service must have a clear privacy policy and must come from
+a licensed development studio.
 
 \begin{frame}[fragile]
 \frametitle{Code of Ethics}
@@ -517,6 +574,12 @@ and will sometimes have rules limiting who can publish those.
 
 \end{frame}
 
+Finally,
+now that I have introduced the regulatory regime,
+I can talk about some of the details in our code of ethics.
+Many of those would look about as weird as 
+deciding to push the man off the bridge
+without having the regulatory context.
 
 \begin{frame}[fragile]
 \frametitle{Whistelblowing}
@@ -524,6 +587,56 @@ and will sometimes have rules limiting who can publish those.
 Violations of law must be reported
 
 \end{frame}
+
+The first principle is that you must report any
+*suspected*
+violation of the law.
+Note that even if the law was never violated,
+but you had reason to suspect and not reported,
+it can be grounds for revocation of the
+software developer license.
+This is important:
+even if a company is exonerated because there was not enough evidence,
+the software developers involved in a court case might have their
+licenses stripped.
+
+It is often easy to develop software in silence while breaking the law.
+Strong whistleblowing constraints means that it is dangerous
+for companies to try and do that:
+law enforcement is going to be involved,
+because people care more about their careers than their jobs.
+
+\begin{frame}[fragile]
+\frametitle{Holistic understanding}
+
+Where is the money?
+\end{frame}
+
+A software developer is committed to understanding the whole product,
+at least in general terms,
+that they are buildling.
+In particular,
+they are expected to ask,
+and understand,
+what the business model of the software is:
+how can the company afford to pay them.
+
+This avoids the
+"I didn't know"
+defense:
+it is your responsibility to know if the software you are making
+is used to support dictatorships or to kill people.
+Now,
+what you
+*do*
+with the knowledge depends on your own ethics,
+and is not really constrained.
+However,
+not
+*knowing*
+where the money is coming from
+*is*
+a breach of ethics.
 
 \begin{frame}[fragile]
 \frametitle{Responsibility to principal}
@@ -533,12 +646,47 @@ responsibility is to the development studio.
 
 \end{frame}
 
+The ultimate responsibility of a developer is to the studio,
+unless instructed to violate the law or the code of ethics.
+While it is good to be concerned about the end user,
+or other impacted people,
+the only ethical way to avoid violating personal ethics is to
+quit and look for another job.
+Specifically,
+sabotaging the software, divulging trade-secrets,
+or violating NDAs is explicitly against the code of ethics.
+
+This means that *employment* NDAs are more enforceable:
+violating those can be a career-ending move for a developer.
+This does not pretain in general to NDAs:
+unless you are signing on a software developer to a studio,
+this does not make an NDA breach to be an ethics violation.
+
 \begin{frame}[fragile]
 \frametitle{Commitment to competence}
 
 Know your limits
 
 \end{frame}
+
+A software developer is committed to working within their competence.
+This means two things.
+A developer must keep up to date on new developments and discoveries:
+for example,
+ongoing education on new kinds of attacks is crucial to knowing how to defend
+against them.
+In general,
+there is a thriving market in
+"continuing education"
+courses,
+in various formats,
+for software developers.
+
+This also means that a developer must refuse to work outside their competence.
+If they do not understand a language well,
+for example,
+they must insist someone with understanding will review their code before
+going to production.
 
 \begin{frame}[fragile]
 \frametitle{Process documentation}
@@ -547,12 +695,41 @@ Document disagreements
 
 \end{frame}
 
+Any disagreements among the development team must be documented
+in a non-deletable subpoenable format.
+This means that,
+as a matter of common practice,
+any trial about software development malpractice starts with
+a subpoena for all disagreements.
+This fullfills a similar function to whistleblowing:
+in cases where there is no clear legal violation,
+those documented disagreement still allow ferreting out whether
+any of the laws have been breached.
+
+Again,
+note that documenting disagreements is an ethics matter:
+having a disagreement and
+*not*
+documenting it means it is grounds for license revocation,
+*regardless*
+of what the violation involved.
+There is no commitment to no compromise:
+merely one to documentation.
+
 \begin{frame}[fragile]
 \frametitle{Discrimination and harassment}
 
 Beyond employment law
 
 \end{frame}
+
+Finally,
+there are protections against discrimination,
+harassment,
+and retaliation.
+While most of those echo the law,
+they go beyond the law in some protected categories,
+but they also serve as a way of standardizing the law.
 
 \begin{frame}[fragile]
 \frametitle{21st century: Incidents}
@@ -565,12 +742,44 @@ Beyond employment law
 
 \end{frame}
 
+The 21st century had its share of incidents.
+While none of those rose to the level of
+"the incident",
+they were not insubstantial.
+Cambridge Analytica misused the data of many people.
+Zoom put people at risk by poor disclosure of vulnerabilities.
+Uber had a hostile work culture from the CEO down.
+
+There is really no reason to wait for the incident to act.
+
+
 \begin{frame}[fragile]
 \frametitle{If Not Now, When?}
 
 Can we change the timeline?
 
 \end{frame}
+
+The ethics of time travel,
+naturally,
+are still in their infancy.
+So I propose something radical:
+let us change the timeline.
+Do not take my word for it:
+many professions where you are responsible for serious things,
+and require a high degree of technical competency,
+have codes of ethics.
+
+Those codes help practicioners make better decisions,
+and helps them do the best work they can.
+They are not perfect,
+but they are better than nothing.
+Improving the regulation around software,
+and having an enforceable code of ethics,
+might save the world...
+or at least,
+the lives of millions.
+
 
 
 Picture credits:
